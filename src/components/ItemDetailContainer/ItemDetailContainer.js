@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { getItemById } from '../../asyncMock'
 import { useParams } from 'react-router-dom'
-
+import AddItemButton from '../AddItemButton/AddItemButton'
+import ItemQuantitySelector from '../ItemQuantitySelector/ItemQuantitySelector'
+import ItemDetail from '../ItemDetail/ItemDetail'
 
 
 const ItemDetailContainer = ({greeting}) => {
@@ -30,8 +32,21 @@ const ItemDetailContainer = ({greeting}) => {
                 <img src={item.img} className='w-[250px] m-auto'/>
                 <p> Precio: ${item.price} USD</p> 
             </div>
+            <div className='justify-center gap-16 m-auto flex mt-10'>
+                <ItemQuantitySelector/>
+                <AddItemButton/>
+            </div>
         </div>
-    )
+        )
+    // return (
+    //     <div>
+    //         <ItemDetail/>
+    //         <div className='justify-center gap-16 m-auto flex mt-10'>
+    //             <ItemQuantitySelector/>
+    //             <AddItemButton/>
+    //         </div>
+    //     </div>
+    // )
 
 }
 

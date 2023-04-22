@@ -25,11 +25,11 @@ useEffect(() => {
     return (
         <div>    
             <h1 className='text-center mt-4 mb-6 text-[40px] font-bold text-red-400'>{greeting}</h1>
-            <div className='flex max-w-[80%] m-auto flex-wrap' >
+            <div className='flex max-w-[80%] m-auto flex-wrap justify-center gap-3' >
                 {
                     items.map(item => {
                         return(
-                            <div key={item.id} className='border-4 relative'>
+                            <div key={item.id} className='border-2 relative shadow-md rounded-md'>
                                 <h2 className='font-bold text-center'>{item.name}</h2>
                                 <img src={item.img} className='w-[250px]'/>
                                 <Link to={`/item/${item.id}`} className='border-2 bottom-2 left-2 absolute bg-blue-100'> Ver Detalle </Link>
